@@ -1,20 +1,27 @@
 .intro {
   width: 1200px;
   height: 485px;
+  color: black;
+  background-color: #FFFFFF;
   background:
     url("../img/Index/divider.svg") no-repeat 0 100%,
     url("../img/Index/index-background.jpg") no-repeat 0 0;
+  background-size: 100% auto;
 }
 .subscribe {
   width: 1200px;
   height: 411px;
-  background:
-    url("../img/Footer/background-sub.jpg") no-repeat;
+  color: black;
+  background-color: #FFFFFF;
+  background: url("../img/Footer/background-sub.jpg") no-repeat;
+  background-size: 100% auto;
 }
 
 .inner-header {
   width: 1200px;
   height: 408px;
-  background:
-    url("../img/Catalog/catalog-background.jpg") no-repeat;
+  color: black;
+  background-color: #FFFFFF;
+  background: url("../img/Catalog/catalog-background.jpg") no-repeat;
+  background-size: 100% auto;
 }
