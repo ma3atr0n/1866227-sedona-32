@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <!--HEADER START-->
@@ -130,8 +130,8 @@
         <!--Цена отеля-->
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-          <input class="catalog-filter-input" type="text" name="price-from" placeholder="от" value="0">
-          <input class="catalog-filter-input" type="text" name="price-to" placeholder="до" value="9000">
+            <input class="catalog-filter-input" type="text" name="price-from" placeholder="от" value="0">
+            <input class="catalog-filter-input" type="text" name="price-to" placeholder="до" value="9000">
           <button class="range-toggle toggle-min" type="button">
             <span class="visually-hidden">Изменить минимальную цену</span>
           </button>
@@ -195,10 +195,10 @@
               </p>
               <ul class="card-button">
                 <li class="card-button-item">
-                  <a class="button button-brown" href="#">подробнее</a>
+                  <a class="button button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item">
-                  <a class="button button-blue" href="#">В избранное</a>
+                  <a class="button button-blue button-tofavorit" href="#">В избранное</a>
                 </li>
               </ul>
             </div>
@@ -240,10 +240,10 @@
               </p>
               <ul class="card-button">
                 <li class="card-button-item">
-                  <a class="button button-brown" href="#">подробнее</a>
+                  <a class="button button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item">
-                  <a class="button button-blue" href="#">В избранное</a>
+                  <a class="button button-blue button-tofavorit" href="#">В избранное</a>
                 </li>
               </ul>
             </div>
@@ -282,10 +282,10 @@
               </p>
               <ul class="card-button">
                 <li class="card-button-item">
-                  <a class="button button-brown" href="#">подробнее</a>
+                  <a class="button button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item">
-                  <a class="button button-green" href="#">В избранном</a>
+                  <a class="button button-green button-tofavorit" href="#">В избранном</a>
                 </li>
               </ul>
             </div>
@@ -321,10 +321,10 @@
               </p>
               <ul class="card-button">
                 <li class="card-button-item">
-                  <a class="button button-brown" href="#">подробнее</a>
+                  <a class="button button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item">
-                  <a class="button button-blue" href="#">В избранное</a>
+                  <a class="button button-blue button-tofavorit" href="#">В избранное</a>
                 </li>
               </ul>
             </div>
@@ -348,27 +348,27 @@
       </ul>
       <!--/Карточки каталога-->
       <div class="load-more">
-        <button class="button show-more" type="button">Загрузить еще</button>
+        <button class="button button-blue button-more" type="button">Загрузить еще</button>
       </div>
       <!--Пагинация-->
       <ul class="pagination">
         <li class="pagination-item">
-          <a href="" class="pagination-link pagination-prev pagination-disabled">1</a>
+          <a href="" class="button button-blue pagination-button pagination-disabled">1</a>
         </li>
         <li class="pagination-item">
-          <a href="" class="pagination-link pagination-current">2</a>
+          <a href="" class="button button-blue pagination-button">2</a>
         </li>
         <li class="pagination-item">
-          <a href="" class="pagination-link">3</a>
+          <a href="" class="button button-blue pagination-button">3</a>
         </li>
         <li class="pagination-item">
-          <a href="" class="pagination-link">4</a>
+          <a href="" class="button button-blue pagination-button">4</a>
         </li>
         <li class="pagination-item">
-          <a href="" class="pagination-link">...</a>
+          <a href="" class="button button-blue pagination-button">...</a>
         </li>
         <li class="pagination-item">
-          <a href="" class="pagination-link">10</a>
+          <a href="" class="button button-blue pagination-button">10</a>
         </li>
       </ul>
       <!--/Пагинация-->
