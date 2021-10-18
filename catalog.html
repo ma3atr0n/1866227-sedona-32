@@ -12,7 +12,7 @@
   <header class="page-header">
     <!--Навигация левая часть-->
     <nav class="main-navigation">
-      <ul class="navigation-list">
+      <ul class="navigation-list navigation-left">
         <li class="navigation-item">
           <a class="navigation-link" href="index.html">Главная</a>
         </li>
@@ -20,12 +20,12 @@
            <a class="navigation-link" href="#">О Седоне</a>
         </li>
          <li class="navigation-item">
-          <a class="navigation-link navigation-link-selected">Гостиницы</a>
+          <a class="navigation-link" href="#">Гостиницы</a>
          </li>
       </ul>
       <!--Логотип в центре-->
-      <a class="logo" title="Sedona" aria-label="Sedona">
-        <img class="logo-image" src="img/Header/header-logo.svg" width="138" height="70" alt="Логотип Седоны">
+      <a class="logo-header" title="Sedona" aria-label="Sedona">
+        <img class="logo-header-image" src="img/Header/header-logo.svg" width="138" height="70" alt="Логотип Седоны">
       </a>
       <!--Навигация правая часть-->
       <ul class="navigation-list navigation-user">
@@ -50,7 +50,7 @@
   </header>
   <!--HEADER END-->
   <!--MAIN START-->
-  <main class="main-inner">
+  <main class="main-container main-inner">
     <!--HEADER INNER-->
     <header class="inner-header">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -140,44 +140,50 @@
           </button>
         </fieldset>
         <!--Кнопки-->
-        <button class="button button-blue button-apply" type="submit">Применить</button>
-        <a class="button-reset" href="#">Сбросить</a>
+        <div class="catalog-filter-button">
+          <button class="button button-blue button-apply" type="submit">Применить</button>
+          <a class="button-reset" href="#">Сбросить</a>
+        <div>
       </form>
       <!--/Фильтры-->
     </header>
     <!--/HEADER INNER-->
     <!--Каталог-->
     <section class="catalog">
-      <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
-      <p class="catalog-value">Найдено гостиниц: <span class="hotel-count">38</span></p>
-      <!--Форма сортировки-->
-      <form class="sorting" action="https://echo.htmlacademy.ru" method="POST">
-        <select class="sorting-select" name="sorting" aria-label="sorting">
-          <option value="cheap">Сначала дешевые</option>
-          <option value="popular">Сначала популярные</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
-      </form>
-      <!--/Форма сортировки-->
-      <!--Иконки видов отображения-->
-      <ul class="display-type">
-        <li class="display-type-item">
-          <a class="button-display" href="#">
-            <img class="button-display-image" src="img/Catalog/mode-tile.svg" width="16" height="14" alt="Показать карточки">
-          </a>
-        </li>
-        <li class="display-type-item">
-          <a class="button-display" href="#">
-            <img class="button-display-image" src="img/Catalog/mode-slideshow.svg" width="16" height="14" alt="Показать объектами">
-          </a>
-        </li>
-        <li class="display-type-item">
-          <a class="button-display  button-display-selected" href="#">
-            <img class="button-display-image" src="img/Catalog/mode-list.svg" width="16" height="14" alt="Показать список">
-          </a>
-        </li>
-      </ul>
-      <!--Иконки видов отображения-->
+      <!--Сортировка-->
+      <div class="catalog-sorting">
+        <h2 class="visually-hidden" hidden>Список гостиниц с фильтрами</h2>
+        <p class="catalog-value">Найдено гостиниц: <span class="hotel-count">38</span></p>
+        <!--Форма сортировки-->
+        <form class="sorting" action="https://echo.htmlacademy.ru" method="POST">
+          <select class="sorting-select" name="sorting" aria-label="sorting">
+            <option value="cheap">Сначала дешевые</option>
+            <option value="popular">Сначала популярные</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+        </form>
+        <!--/Форма сортировки-->
+        <!--Иконки видов отображения-->
+        <ul class="display-type">
+          <li class="display-type-item">
+            <a class="button-display" href="#">
+              <img class="button-display-image" src="img/Catalog/mode-tile.svg" width="16" height="14" alt="Показать карточки">
+            </a>
+          </li>
+          <li class="display-type-item">
+            <a class="button-display" href="#">
+              <img class="button-display-image" src="img/Catalog/mode-slideshow.svg" width="16" height="14" alt="Показать объектами">
+            </a>
+          </li>
+          <li class="display-type-item">
+            <a class="button-display  button-display-selected" href="#">
+              <img class="button-display-image" src="img/Catalog/mode-list.svg" width="16" height="14" alt="Показать список">
+            </a>
+          </li>
+        </ul>
+        <!--/Иконки видов отображения-->
+      </div>
+      <!--/Сортировка-->
       <!--Карточки каталога-->
       <ul class="catalog-list">
         <!--Первая карточка-->
@@ -350,38 +356,40 @@
       <div class="load-more">
         <button class="button button-blue button-more" type="button">Загрузить еще</button>
       </div>
-      <!--Пагинация-->
-      <ul class="pagination">
-        <li class="pagination-item">
-          <a href="" class="button button-blue pagination-button pagination-disabled">1</a>
-        </li>
-        <li class="pagination-item">
-          <a href="" class="button button-blue pagination-button">2</a>
-        </li>
-        <li class="pagination-item">
-          <a href="" class="button button-blue pagination-button">3</a>
-        </li>
-        <li class="pagination-item">
-          <a href="" class="button button-blue pagination-button">4</a>
-        </li>
-        <li class="pagination-item">
-          <a href="" class="button button-blue pagination-button">...</a>
-        </li>
-        <li class="pagination-item">
-          <a href="" class="button button-blue pagination-button">10</a>
-        </li>
-      </ul>
-      <!--/Пагинация-->
-      <!--Кол-во записей на странице-->
-      <form class="visible-count" action="https://echo.htmlacademy.ru" method="POST">
-        <label class="count-number" for="count-number">Гостиниц на странице:</label>
-        <select class="visible-count-select" id="count-number" name="count">
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-        </select>
-      </form>
-      <!--/Кол-во записей на странице-->
+      <div class="catalog-pagination">
+        <!--Пагинация-->
+        <ul class="pagination">
+          <li class="pagination-item">
+            <a href="" class="button button-blue pagination-button pagination-disabled">1</a>
+          </li>
+          <li class="pagination-item">
+            <a href="" class="button button-blue pagination-button">2</a>
+          </li>
+          <li class="pagination-item">
+            <a href="" class="button button-blue pagination-button">3</a>
+          </li>
+          <li class="pagination-item">
+            <a href="" class="button button-blue pagination-button">4</a>
+          </li>
+          <li class="pagination-item">
+            <a href="" class="button button-blue pagination-button">...</a>
+          </li>
+          <li class="pagination-item">
+            <a href="" class="button button-blue pagination-button">10</a>
+          </li>
+        </ul>
+        <!--/Пагинация-->
+        <!--Кол-во записей на странице-->
+        <form class="visible-count" action="https://echo.htmlacademy.ru" method="POST">
+          <label class="count-number" for="count-number">Гостиниц на странице:</label>
+          <select class="visible-count-select" id="count-number" name="count">
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </form>
+        <!--/Кол-во записей на странице-->
+      </div>
     </section>
     <!--/Каталог-->
   </main>
@@ -393,7 +401,7 @@
       <h2 class="subscribe-title subscribe-text-white">Подпишитесь на рассылку</h2>
       <p class="subscribe-discription subscribe-text-white">Укажите предполагаемые даты поездки,
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <form class="subscribe-input" action="https://echo.htmlacademy.ru" method="post">
+      <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
         <label aria-label="Ваш e-mail">
           <input class="subscribe-input" type="email" name="email" placeholder="Ваш e-mail">
         </label>
@@ -403,7 +411,7 @@
     <!--/Подписка-->
     <!--Контакты-->
     <section class="footer-contacts">
-      <h2 class="visually-hidden">Как связаться с нами?</h2>
+      <h2 class="visually-hidden" hidden>Как связаться с нами?</h2>
       <ul class="social">
         <li class="social-item">
           <a class="social-link" href="https://twitter.com/htmlacademy_ru">

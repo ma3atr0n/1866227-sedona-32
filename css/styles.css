@@ -26,7 +26,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  background-color: #FFFFFF;
+  background-color: #E5E5E5;
   color: #000000;
 }
 
@@ -61,6 +61,8 @@ body {
 .button-booking {
   font-size: 20px;
   line-height: 36px;
+  display: block;
+
 }
 
 .button-subscribe {
@@ -83,6 +85,7 @@ body {
   width: 1200px;
   display: flex;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .navigation-list {
@@ -92,11 +95,11 @@ body {
 }
 
 .navigation-left {
-  width: 310px;
-  margin-right: 149.5px;
-  margin-left: 71.5px;
+  width: 309px;
+  margin-right: 151px;
+  margin-left: 71px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .logo-header {
@@ -106,7 +109,7 @@ body {
 .navigation-user {
   width: 250px;
   margin-left: auto;
-  margin-right: 71.5px;
+  margin-right: 72px;
   display: flex;
   justify-content: space-around;
 }
@@ -143,7 +146,6 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-
 }
 
 .intro-image {
@@ -170,6 +172,7 @@ body {
 /* advantages */
 .advantages {
   text-align: center;
+  background: #FFFFFF;
 }
 .advantages-title {
   font-weight: 700;
@@ -248,6 +251,7 @@ body {
   width: 1200px;
   display: flex;
   flex-direction: column;
+  background: #FFFFFF;
 }
 .booking-title {
   font-weight: 700;
@@ -264,6 +268,7 @@ body {
 }
 
 /* FOOTER */
+/* subscribe */
 .subscribe {
   width: 1200px;
   display: flex;
@@ -272,7 +277,6 @@ body {
   align-items: center;
 }
 
-/* subscribe */
 .subscribe {
   background: black url("../img/Footer/background-sub.jpg") no-repeat;
   background-size: 100% auto;
@@ -296,6 +300,7 @@ body {
 }
 
 .subscribe-input {
+  width: 600px;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -306,22 +311,30 @@ body {
   opacity: 0.6;
 }
 
-/* social */
-.social {
-  width: 240px;
+.subscribe-form {
+  width: 800px;
   display: flex;
-  margin: 0;
-  padding: 0;
   justify-content: center;
+  margin: 0 auto;
 }
 
-/* contacts */
+/* footer-contacts */
 .footer-contacts {
   width: 1200px;
   display: flex;
   margin: 0 auto;
+  background: #FFFFFF;
+}
+/* social */
+.social {
+  width: 107px;
+  display: flex;
+  margin: 0 61px 0 71px;
+  padding: 0;
+  justify-content: space-between;
 }
 
+/* contacts */
 .phone {
   text-decoration: none;
   font-weight: normal;
@@ -334,21 +347,45 @@ body {
 }
 /* footer-logo */
 .footer-logo {
-  width: 240px;
+  width: 115px;
+  margin-left: 0 72 0 auto;
 }
 
 /* CATALOG*/
+.main-inner {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
 .inner-header {
+  width: 1200px;
   background: url("../img/Catalog/catalog-background.jpg") no-repeat;
   background-color:black;
   color:#FFFFFF;
   background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .inner-header-title {
   font-weight: bold;
   font-size: 60px;
   line-height: 78px;
+  width: 528px;
+  margin: 0 601px 8px 71px;
+}
+
+.breadcrumbs {
+  width: 111px;
+  margin: 0 auto 45px 73px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
@@ -359,10 +396,39 @@ body {
 }
 
 /* catalog-filter */
+.catalog-filter {
+  width: 1057px;
+  display: flex;
+}
+
+.catalog-filter-group:nth-child(1) {
+  width: 150px;
+  margin: 0 68px 0 71px;
+}
+
+.catalog-filter-group:nth-child(2) {
+  width: 145px;
+  margin-right: 168px;
+}
+
+.catalog-filter-group:nth-child(3) {
+  width: 287px;
+  margin-right: 81px;
+}
+
+.catalog-filter-group:nth-child(4) {
+  width: 160px;
+  margin-right: 72px;
+}
+
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+}
+
+.catalog-filter-list {
+  list-style-type: none;
 }
 
 .control-label {
@@ -401,11 +467,36 @@ body {
 }
 
 /* CATALOG */
+.catalog {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.catalog-sorting {
+  width: 1057px;
+  display: flex;
+  margin: 0 auto;
+}
+
 .catalog-value {
   font-weight: 700;
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
+  display: block;
+  width: 360px;
+  margin-right: auto;
+}
+
+.sorting {
+  width: 287px;
+  margin-right: 81px;
+}
+
+.display-type {
+  width: 160px;
 }
 
 .sorting-select {
@@ -418,6 +509,22 @@ body {
 }
 
 /* CATALOG CARD */
+.catalog-list {
+  width: 1056px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.card {
+  width: 1056px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
 .card-name {
   font-weight: 700;
   font-size: 24px;
@@ -438,7 +545,28 @@ body {
   text-transform: uppercase;
 }
 
+/* load-more */
+.load-more {
+  width: 625px;
+  margin: 0 auto;
+}
+
 /* pagination */
+.catalog-pagination {
+  width: 1056px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.pagination {
+  width: 369px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .pagination-disabled {
   color:#000000;
   background-color: #F2F2F2;
