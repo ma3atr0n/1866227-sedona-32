@@ -83,7 +83,9 @@ body {
 /* HEADER */
 .main-navigation {
   width: 1200px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 138px 1fr;
+  justify-content: space-between;
   margin: 0 auto;
   background-color: #FFFFFF;
 }
@@ -120,6 +122,9 @@ body {
   font-size: 20px;
   line-height: 26px;
   text-decoration: none;
+  display: block;
+  margin: 20px 0;
+  padding: 5px;
 }
 
 .button-apply {
