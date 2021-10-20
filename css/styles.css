@@ -293,6 +293,10 @@ img {
     center/cover;
   text-align: center;
 }
+.subscribe-catalog {
+  color: #333333;
+  background: #fff;
+}
 
 .subscribe-container {
   max-width: 800px;
