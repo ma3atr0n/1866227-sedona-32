@@ -48,6 +48,10 @@ img {
   height: auto;
 }
 
+p {
+  margin: 0;
+}
+
 .page-wrapper {
   max-width: 1200px;
   width: 100%;
@@ -67,7 +71,7 @@ img {
   margin-right: auto;
 }
 .container-lg {
-  max-width: 1057px;
+  max-width: 1056px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -107,6 +111,11 @@ img {
     text-align: center;
   }
 
+  .button-md {
+    width: 140px;
+    padding: 10px;
+  }
+
   .button-brown {
     background-color:#756257;
     color: #FFFFFF;
@@ -123,14 +132,79 @@ img {
   }
 
   .button-booking {
+    display: block;
+    margin-top: 73px;
+    width: 575px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .button-subscribe {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 20px;
+  }
+
+  .button-booking-nav {
+    display: block;
+    margin-left: 25px;
+  }
+
+  .button-reset {
+    line-height: 23px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .button-apply {
+    font-size: 16px;
+    line-height: 21px;
+    width: 160px;
+    height: 48px;
+    margin-bottom: 20px;
+    margin-top: 55.33px;
+  }
+
+  .button-details {
+    display: block;
+    font-size: 16px;
+    width: 151px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+  }
+
+  .button-tofavorit {
+    display: block;
+    font-size: 16px;
+    width: 160px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+  }
+
+  .button-more {
+    display: block;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 625px;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 15px;
   }
 
   .pagination-button {
+    display: flex;
+    box-sizing: border-box;
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+    line-height: 26px;
+    align-items: center;
+    justify-content: center;
   }
-
 /* ==================================
    Section - Typography
    ================================= */
@@ -148,7 +222,7 @@ img {
 .title-3 {
   font-weight: 700;
   font-size: 30px;
-  line-height: 30px;
+  line-height: 36px;
   text-transform: uppercase;
   color: #000;
 }
@@ -158,45 +232,70 @@ img {
   color: #000;
 }
 
+.title-5 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.selector-1 {
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+}
+
 /* ==================================
    Section - Header
    ================================= */
 .page-header {
   background-color: #fff;
+  position: relative;
 }
 .main-navigation {
   /* display: flex;
   align-items: center; */
 
   display: grid;
-  grid-template-columns: 310px 1fr 250px;
+  grid-template-columns: calc((100% - 138px)/2) 1fr calc((100% - 138px)/2);
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
 .navigation-left {
-  max-width: 310px;
+  max-width: 340px;
 }
 
 .navigation-link {
+  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
   color: #000000;
+  padding: 20px 15px;
 }
+
 .logo-header {
   margin-left: auto;
   margin-right: auto;
 }
 
 .navigation-user {
-  max-width: 250px;
+  max-width: 300px;
+  margin-left: auto;
+  justify-content: end;
+}
+
+.navigation-user .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
+  padding: 23px 10px;
 }
 
 /* ==================================
@@ -208,10 +307,6 @@ img {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 51px;
-  padding-bottom: 82px;
 }
 
 .intro::after {
@@ -226,6 +321,10 @@ img {
   right: 0;
 }
 
+.intro-image {
+  padding-top: 51px ;
+  padding-bottom: 82px ;
+}
 /* ==================================
    Section - Advantages
    ================================= */
@@ -239,15 +338,25 @@ img {
 }
 
 .advantages-discription {
+  display: block;
+  margin-top: 23px;
   font-size: 22px;
   line-height: 36px;
 }
 
 .advantages-row {
   display: flex;
+  height: 384px;  /* ? */
 }
 
-.advantages-row:nth-child(1) .advantages-item {
+.advantages-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages-row:nth-child(1) .advantages-item,
+.advantages-row:nth-child(3) .advantages-item {
   width: calc(100% - 800px);
 }
 
@@ -260,7 +369,37 @@ img {
   width: calc(100% / 3);
 }
 
+.advantages-row:not(:nth-child(2)) .advantages-item{
+    padding-top: 98px;
+    padding-bottom: 77px;
+}
+
+.advantages-row:not(:nth-child(2)) .advantages-item-title {
+    margin-bottom: 25px;
+}
+
+.advantages-row:not(:nth-child(2)) .advantages-item-discription { 
+  width: 220px;
+  margin-top: 26px;
+}
+
+.advantages-row:nth-child(2) .advantages-item{
+  padding-top: 89px;
+  padding-bottom: 79px;
+}
+
+.advantages-row:nth-child(2) .advantages-logo {
+  margin-bottom: 23px;
+}
+
+.advantages-row:nth-child(2) .advantages-item-discription { 
+width: 250px;
+margin-top: 20px;
+}
+
 .advantages-item-title {
+  font-size: 24px;
+  line-height: 28px;
   text-transform: uppercase;
 }
 
@@ -282,6 +421,11 @@ img {
    ================================= */
 .booking {
   text-align: center;
+  padding-top: 91px;
+  padding-bottom: 91px;
+}
+.booking-title {
+  margin-bottom: auto;
 }
 
 /* ==================================
@@ -305,15 +449,20 @@ img {
   padding: 0;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 93px;
 }
 
 .subscribe-title {
   color: inherit;
+  margin-bottom: 15px;
 }
 
 .subscribe-discription {
   font-size: 22px;
   line-height: 26px;
+  display: block;
+  margin-bottom: 73px;
 }
 
 .subscribe-form {
@@ -324,11 +473,14 @@ img {
   display: block;
   width: calc(100% - 200px);
 }
+
 .subscribe-input {
   width: 100%;
   font-family: "PT Sans", sans-serif;
   line-height: 26px;
   color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 /* ==================================
@@ -336,24 +488,38 @@ img {
    ================================= */
 .footer-contacts {
   display: flex;
-  justify-content: space-between;
+  text-align: center;
 }
 
 .social {
-  width: 107px;
+  width: 140px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
+  margin-right: 28px;
+}
+
+.social-link {
+  display: block;
+  padding: 15px;
 }
 
 .phone {
   font-size: 40px;
   line-height: 40px;
-  text-align: center;
   text-transform: uppercase;
   color: #000000;
+  max-width: 720px;
+  width: 100%;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
+.footer-logo {
+  padding-top: 42px;
+  padding-bottom: 44px;
+}
 /* ==================================
    Section - Inner Header
    ================================= */
@@ -364,13 +530,20 @@ img {
   color: #ffffff;
 }
 
+.inner-header-container {
+  padding-top: 35px;
+  padding-bottom: 83px;
+}
+
 .inner-header-title {
   color: #fff;
+  margin-bottom: 5px;
 }
 
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 45px;
 }
 
 .breadcrumbs-link {
@@ -394,14 +567,20 @@ img {
 
 .catalog-filter-group:nth-child(1) {
   margin-right: 67px;
+  max-width: 150px;
+  width: 100%;
 }
 
 .catalog-filter-group:nth-child(2) {
   margin-right: 167px;
+  max-width: 145px;
+  width: 100%;
 }
 
 .catalog-filter-group:nth-child(3) {
   margin-right: 81px;
+  max-width: 287px;
+  width: 100%;
 }
 
 .catalog-filter-group:nth-child(4) {
@@ -411,21 +590,40 @@ img {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 15px;
 }
 
 .control-label {
   line-height: 23px;
 }
 
-.button-reset {
-  line-height: 23px;
+.catalog-filter-input {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.catalog-filter-button {
   text-align: center;
-  text-decoration: none;
-  color: #ffffff;
 }
 
 .catalog-sorting {
   display: flex;
+  padding-top: 44px;
+  margin-bottom: 42px;
+  align-items: center;
+}
+
+.sorting-select {
+  width: 287px;
+  height: 48px;
+  
 }
 
 .catalog-value {
@@ -445,40 +643,89 @@ img {
 
 .display-type-item {
   border: 1px solid #000;
-  width: calc(100% / 3 - 4px);
+  width: calc((100% - 16px) / 3);
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.catalog-list {
+  margin-bottom: 61px;
+}
+
 .card {
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
+}
+
+.card-column {
+  display: flex;
+}
+
+.card-column:nth-child(2) {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-rating-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-rating-item:not(:last-child) {
+  margin-right: 7px;
+}
+
+.card-content {
+  margin-left: 37px;
+  width: 318px;
+  
 }
 
 .card-name {
   line-height: 31px;
+  margin-bottom: 1px;
 }
 
 .card-info {
   line-height: 23px;
+  display: flex;
+  margin-bottom: 31px; /* ? */
+}
+
+.card-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-info .card-info-type {
+  margin-right: 78px;
 }
 
 .card-rating-value {
+  width: 160px;
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  background: #F2F2F2;
+  border-radius: 4px;
 }
 
 .card-rating {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .load-more {
   width: 625px;
   margin: 0 auto;
+  margin-bottom: 61px;
 }
 
 .catalog-pagination {
@@ -491,6 +738,10 @@ img {
   display: flex;
 }
 
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .pagination-disabled {
   color: #000000;
   background-color: #f2f2f2;
@@ -499,4 +750,25 @@ img {
 .visible-count {
   max-width: 386px;
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.count-number {
+  line-height: 23px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-right: 50px;
+}
+
+.visible-count-select {
+  width: 160px;
+  height: 48px;
+  padding: 13px 100px 12px 17px;
+}
+
+.subscribe-container-catalog {
+  padding-top: 89px;
+  padding-bottom: 137px;
 }
