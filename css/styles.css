@@ -466,7 +466,6 @@ p {
 .subscribe-discription {
   font-size: 22px;
   line-height: 26px;
-  display: block;
   margin-bottom: 26px;
 }
 
@@ -482,6 +481,7 @@ p {
 .subscribe-input {
   width: 100%;
   font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   line-height: 26px;
   color: rgba(0, 0, 0, 0.6);
   height: 100%;
@@ -494,6 +494,8 @@ p {
   display: grid;
   grid-template-columns: auto 168px 720px 168px auto;
   text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .social {
@@ -505,23 +507,19 @@ p {
 
 .social-link {
   display: block;
-  padding: 15px 30px 15px 0;
+  padding-right:30px;
 }
 
 .phone {
-  grid-column: 3/4;
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
-  padding-top: 40px;
-  padding-bottom: 30px;
 }
 
 .footer-logo {
   grid-column: 4/5;
-  padding-top: 42px;
-  padding-bottom: 44px;
+  justify-self: flex-end;
 }
 /* ==================================
    Section - Inner Header
@@ -531,11 +529,17 @@ p {
   background: #bdd0de url("../img/Catalog/catalog-background.jpg") no-repeat
     center/cover;
   color: #ffffff;
+  display: grid;
+  grid-template-columns: auto 1057px auto;
+  padding-top: 35px;
+  padding-bottom: 83px;
+}
+
+.inner-header > * {
+  grid-column: 2/3  ;
 }
 
 .inner-header-container {
-  padding-top: 35px;
-  padding-bottom: 83px;
 }
 
 .inner-header-title {
@@ -566,24 +570,22 @@ p {
   border: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .catalog-filter-group:nth-child(1) {
   margin-right: 67px;
   max-width: 150px;
-  width: 100%;
 }
 
 .catalog-filter-group:nth-child(2) {
   margin-right: 167px;
   max-width: 145px;
-  width: 100%;
 }
 
 .catalog-filter-group:nth-child(3) {
   margin-right: 81px;
   max-width: 287px;
-  width: 100%;
 }
 
 .catalog-filter-group:nth-child(4) {
