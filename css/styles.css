@@ -203,11 +203,11 @@ p {
     width: 100%;
     padding-top: 14px;
     padding-bottom: 15px;
+    border: 0;
   }
 
   .pagination-button {
     display: flex;
-    box-sizing: border-box;
     width: 55px;
     height: 55px;
     font-size: 20px;
@@ -249,12 +249,27 @@ p {
   text-transform: uppercase;
 }
 
-.selector-1 {
+.custom-select {
   font-family: "PT Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
   color: #333333;
+  appearance: none;
+  padding: 12px 19px;
+  background: #FFFFFF url("../img/Catalog/select-arrow.svg") no-repeat center right 20px;
+  outline: none;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
+  transition: border 0.2s ease;
+  cursor: pointer;
+}
+.custom-select:hover,
+.custom-select:focus {
+  border-color: #83b3d3;
+}
+.custom-select:active {
+  border-color: #E6E6E6;
 }
 
 /* ==================================
@@ -265,7 +280,7 @@ p {
 
 .main-navigation {
   display: grid;
-  grid-template-columns: auto 350px 357px 350px auto;
+  grid-template-columns: auto 310px 437px 310px auto;
   position: relative;
 }
 
@@ -273,10 +288,17 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+
 }
 
 .navigation-left {
   grid-column: 2/3;
+}
+
+.navigation-item {
+  padding-top: 11px;
+  padding-bottom: 12px;
 }
 
 .navigation-link {
@@ -285,8 +307,10 @@ p {
   font-size: 20px;
   line-height: 26px;
   color: #000000;
-  padding: 20px 0px;
-  padding-right: 33px;
+  transition: outline 0.25s ease;
+  padding: 8px;
+  outline: 0;
+  border-radius: 10px;
 }
 
 .logo-header {
@@ -299,12 +323,6 @@ p {
 .navigation-user {
   justify-content: end;
   grid-column: 4/5;
-}
-
-.navigation-user .navigation-link {
-  min-width: 18px;
-  min-height: 18px;
-  padding: 20px 10px;
 }
 
 /* ==================================
@@ -343,7 +361,7 @@ p {
 
 .advantages-header {
   display: grid;
-  grid-template-columns: 1fr 720px 1fr;
+  grid-template-columns: auto 720px auto;
   padding: 63px 0 79px 0;
 }
 
@@ -356,36 +374,37 @@ p {
 }
 .advantages-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .advantages-item-title {
   color: #000;
+  margin-bottom: 25px;
 }
 
 .advantages-item-cold .advantages-item-title {
   color: #FFFFFF;
 }
 
-.advantages-item-type-1 .advantages-item-title,
-.advantages-item-type-1 .advantages-count {
-  margin-bottom: 25px;
+.advantages-item-title-icon {
+  margin-bottom: 20px;
+}
+
+.advantages-count {
+  margin-bottom: 26px;
 }
 
 .advantages-logo {
-  margin-bottom: 20px;
-}
-.advantages-item-type-2 .advantages-item-title {
   margin-bottom: 23px;
 }
 
-.advantages-item-padding-1 {
+.pd-1 {
   padding: 98px 90px 77px;
 }
-.advantages-item-padding-2 {
+.pd-2 {
   padding: 89px 75px 79px;
 }
-.advantages-item-padding-3 {
+.pd-3 {
   padding: 98px 75px 77px;
 }
 
@@ -494,20 +513,25 @@ p {
   display: grid;
   grid-template-columns: auto 168px 720px 168px auto;
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  align-items: center;
 }
 
 .social {
   grid-column: 2/3;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+}
+
+.social-item {
+  padding: 40px 0;
 }
 
 .social-link {
-  display: block;
-  padding-right:30px;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
 .phone {
@@ -539,9 +563,6 @@ p {
   grid-column: 2/3  ;
 }
 
-.inner-header-container {
-}
-
 .inner-header-title {
   color: #fff;
   margin-bottom: 5px;
@@ -551,9 +572,27 @@ p {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 45px;
+  align-items: center;
 }
 
-.breadcrumbs-link {
+.breadcrumbs-item:not(:last-child) {
+  position: relative;
+  padding-right: 16px;
+  margin-right: 10px;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 8px;
+  background: url("../img/Catalog/arrow.svg") no-repeat center/contain;
+}
+
+.breadcrumbs-link {  
   font-size: 16px;
   line-height: 21px;
 }
@@ -623,7 +662,7 @@ p {
   ================================= */
 .catalog {
   display: grid;
-  grid-template-columns: auto 1056px auto;
+  grid-template-columns: auto 1057px auto;
 }
   
 .catalog > * {
@@ -658,71 +697,78 @@ p {
   justify-content: space-between;
 }
 
-.display-type-item {
-  border: 1px solid #000;
-  width: calc((100% - 16px) / 3);
-  height: 48px;
+.button-display {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #000;
 }
-
 /* ==================================
    Section - cards
    ================================= */
 
 .card {
   display: grid;
-  grid-template-columns: auto 180px 37px 318px 521px auto;
+  grid-template-columns: 180px 318px auto;
+  column-gap: 37px;
   padding: 30px 0;
   border-top: 1px solid #E6E6E6;
   border-bottom: 1px solid #E6E6E6;
 }
 
 .card-link {
-  grid-column: 2/3;
+  grid-column: 1/2;
 }
 
 .card-content {
-  grid-column: 4/5;
+  grid-column: 2/3;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .card-name {
-  grid-column: 1/-1;
-  margin-bottom: 1px;
+  line-height: 31px;
 }
+
+.card-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: auto;
+}
+
+.card-info > * {
+  width: 50%;
+}
+
 .card-info-type {
-  padding-bottom: 40px;
-  grid-column: 1/2;
+  padding-right: 10px;
 }
-.card-info-price {
-  padding-bottom: 40px;/* ? */
-  grid-column: 2/-1;
-}
+
 .card-button {
-  grid-column: 1/-1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-.card-button-item-details {
-  grid-column: 1/2;
-}
-.card-button-item-tofavorit {
-  
-  grid-column: 2/-1;
+  column-gap: 8px;
 }
 
 .card-column {
-  grid-column: 5/6;
+  grid-column: 3/4;
   justify-self: end;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-rating {
   display: flex;
   justify-content: center;
-  margin-bottom: 61px;
+  align-items: center;
+  margin-bottom: auto;
 }
 
 .card-rating-value {
@@ -761,10 +807,7 @@ p {
 .pagination {
   width: 369px;
   display: flex;
-}
-
-.pagination-item:not(:last-child) {
-  margin-right: 8px;
+  justify-content: space-between;
 }
 
 .pagination-disabled {
