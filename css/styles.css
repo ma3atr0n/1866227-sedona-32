@@ -116,6 +116,7 @@ p {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    border-radius: 4px;
   }
 
   .button-md {
@@ -311,6 +312,22 @@ p {
   padding: 8px;
   outline: 0;
   border-radius: 10px;
+}
+
+.navigation-link-active {
+  position: relative;
+}
+
+.navigation-link-active::before {
+  position: absolute;
+  content: "";
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  bottom: -13px;
+  z-index: 1;
+  background-color:  #756257;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .logo-header {
