@@ -60,8 +60,7 @@ p {
 }
 
 .page-wrapper {
-  max-width: 1200px;
-  width: 100%;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -109,6 +108,16 @@ p {
   color: #000000;
 }
 
+.condition-brown:hover {
+  color:  #756257;
+}
+.condition-brown:focus {
+  color:  #756257;
+  outline: 3px solid #83B3D3;
+}
+.condition-brown:active {
+  color: rgba(117, 98, 87, 0.3);
+}
 /* ==================================
    Section - Buttons
    ================================= */
@@ -116,28 +125,67 @@ p {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    border: none;
     border-radius: 4px;
+    cursor: pointer;
   }
 
   .button-md {
+    display: block;
+    font-size: 16px;
     width: 160px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 4px;
   }
 
   .button-brown {
     background-color:#756257;
     color: #FFFFFF;
   }
+  .button-brown:hover {
+    background-color: #615048;
+  }
+  .button-brown:focus {
+    background: #615048;
+    outline: 3px solid #83B3D3;
+  }
+  .button-brown:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   .button-blue {
     background-color:#83B3D3;
     color: #FFFFFF;
   }
+  .button-blue:hover {
+    background-color: #68A2CA;
+  }
+  .button-blue:focus {
+    background: #68A2CA;
+    outline: 3px solid #756257;
+  }
+  .button-blue-white:focus {
+    background: #68A2CA;
+    outline: 3px solid #FFFFFF;
+  }
+  .button-blue:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   .button-green {
     background-color:#7DB54F;
     color: #FFFFFF;
+  }
+  .button-green:hover {
+    background-color: #6C9E42;
+  }
+  .button-green:focus {
+    background: #6C9E42;
+    outline: 3px solid #756257;
+  }
+  .button-green:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   .button-booking {
@@ -145,10 +193,11 @@ p {
     width: 575px;
     font-size: 20px;
     line-height: 36px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     margin-right: auto;
     margin-left: auto;
+    border-radius: 10px;
   }
 
   .button-subscribe {
@@ -156,11 +205,11 @@ p {
     font-size: 20px;
     line-height: 26px;
     min-width: 200px;
-    padding: 20px;
+    padding: 17px 20px;
+    border-radius: 0px 10px 10px 0px;
   }
 
   .button-booking-nav {
-    display: block;
     margin-left: 20px;
   }
 
@@ -181,19 +230,7 @@ p {
   }
 
   .button-details {
-    display: block;
-    font-size: 16px;
     width: 151px;
-    padding-top: 9px;
-    padding-bottom: 10px;
-  }
-
-  .button-tofavorit {
-    display: block;
-    font-size: 16px;
-    width: 160px;
-    padding-top: 9px;
-    padding-bottom: 10px;
   }
 
   .button-more {
@@ -281,7 +318,7 @@ p {
 
 .main-navigation {
   display: grid;
-  grid-template-columns: auto 310px 437px 310px auto;
+  grid-template-columns: auto 315px 427px 315px auto;
   position: relative;
 }
 
@@ -298,8 +335,8 @@ p {
 }
 
 .navigation-item {
-  padding-top: 11px;
-  padding-bottom: 12px;
+  padding-top: 13px;
+  padding-bottom: 14px;
 }
 
 .navigation-link {
@@ -309,9 +346,30 @@ p {
   line-height: 26px;
   color: #000000;
   transition: outline 0.25s ease;
-  padding: 8px;
+  padding: 6px 12px;
   outline: 0;
   border-radius: 10px;
+}
+
+/* .navigation-link:not(.navigation-link-active):hover {
+  color: #756257;
+}
+.navigation-link:focus {
+  color: #756257;
+  outline: 3px solid #83B3D3;
+}
+.navigation-link:not(.navigation-link-active):active {
+  color: rgba(117, 98, 87, 0.3);
+} */
+
+.navigation-link:hover path {
+  fill: #756257;
+}
+.navigation-link:focus path {
+  fill: #756257;
+}
+.navigation-link:active path {
+  fill: #756257;
 }
 
 .navigation-link-active {
@@ -324,7 +382,7 @@ p {
   left: 8px;
   right: 8px;
   height: 2px;
-  bottom: -13px;
+  bottom: -15px;
   z-index: 1;
   background-color:  #756257;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -341,6 +399,12 @@ p {
   justify-content: end;
   grid-column: 4/5;
 }
+
+.navigation-user .navigation-link {
+  padding: 10px;
+}
+
+
 
 /* ==================================
    Section - Intro
@@ -521,6 +585,21 @@ p {
   line-height: 26px;
   color: rgba(0, 0, 0, 0.6);
   height: 100%;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+  background: #F2F2F2;
+}
+.subscribe-input:hover{
+  background: #E6E6E6;
+}
+.subscribe-input:focus{
+  background: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+.subscribe-input:active{
+  background: #FFFFFF;
+  color: #000000;
+  outline: 2px solid #000000;
 }
 
 /* ==================================
@@ -549,18 +628,41 @@ p {
   height: 40px;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+}
+.social-link:hover path{
+  fill: #68A2CA;
+}
+.social-link:focus path {
+  fill: #68A2CA;
+}
+.social-link:active path{
+  fill: rgba(104, 162, 202, 0.3);
 }
 
-.phone {
+.phone-link {
   font-size: 40px;
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .footer-logo {
   grid-column: 4/5;
   justify-self: flex-end;
+  padding: 18px;
+  border-radius: 10px;
+}
+.footer-logo:hover path{
+  fill: #756257;
+}
+.footer-logo:focus path {
+  fill: #756257;
+}
+.footer-logo:active path{
+  fill: rgba(117, 98, 87, 0.3);
 }
 /* ==================================
    Section - Inner Header
@@ -720,8 +822,13 @@ p {
   align-items: center;
   width: 48px;
   height: 48px;
-  border: 1px solid #000;
+  border: 2px solid #E6E6E6;
 }
+
+.button-display-currnet {
+  border-color: #000000;
+}
+
 /* ==================================
    Section - cards
    ================================= */
@@ -851,9 +958,4 @@ p {
   width: 160px;
   min-height: 48px;
   padding-left: 17px;
-}
-
-.subscribe-container-catalog {
-  padding-top: 89px;
-  padding-bottom: 137px;
 }

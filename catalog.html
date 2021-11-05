@@ -17,13 +17,13 @@
       <nav class="main-navigation">
         <ul class="navigation-list navigation-left reset-ul">
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link condition-brown" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
+            <a class="navigation-link condition-brown" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link">Гостиницы</a>
+            <a class="navigation-link navigation-link-active">Гостиницы</a>
           </li>
         </ul>
         <!--Логотип в центре-->
@@ -33,16 +33,29 @@
         <!--Навигация правая часть-->
         <ul class="navigation-list navigation-user reset-ul">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="navigation-link condition-brown" href="#">
               <span class="visually-hidden">Поиск</span>
-              <img class="navigation-search" src="img/Header/search.svg" width="18" height="18" alt="Логотип Поиска">
+              <svg class="navigation-icon" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="m18 16.5-3.7-3.7c1-1.3 1.7-3 1.7-4.9 0-4.4-3.6-8-8-8S0 3.6 0 8c0 4.4 3.6
+                8 8 8 1.8 0 3.5-.6 4.9-1.7l3.7 3.7 1.4-1.5ZM8 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6
+                6-2.7 6-6 6Z" fill="#000"/>
+              </svg>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="navigation-link condition-brown" href="#">
               <span class="visually-hidden">Избранное</span>
-              <img class="navigation-favorit" src="img/Header/heart12.svg" width="18" height="17"
-                alt="Логотип Избранное">
+              <svg class="navigation-icon" aria-hidden="true" focusable="false" width="18" height="17" viewBox="0 0 18 17" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.9 17C8.6 17 8.3 16.9 8.1 16.6C2.7 10.5 1.4 9.1 1.1 8.7C0.4 7.8 0 6.6
+                0 5.4C0 2.4 2.4 0 5.5 0C6.8 0 8 0.5 9 1.3C10 0.5 11.3 0 12.5 0C15.5 0 18 2.4 18
+                5.4C18 6.7 17.5 7.9 16.7 8.8L9.7 16.7C9.5 16.9 9.3 17 8.9 17ZM2.9 7.5C3.2 7.9 6.4
+                11.5 9 14.4L15.2 7.4C15.7 6.9 15.9 6.2 15.9 5.4C15.9 3.6 14.4 2.1 12.6 2.1C11.6
+                2.1 10.6 2.6 9.9 3.4C9.6 3.7 9.3 3.8 9 3.8C8.7 3.8 8.4 3.6 8.2 3.4C7.5 2.6 6.5
+                2.1 5.5 2.1C3.7 2.1 2.2 3.6 2.2 5.4C2.1 6.3 2.5 7 2.9 7.5C2.8 7.5 2.8 7.5 2.9 7.5Z"
+                fill="black"/>
+              </svg>
             </a>
           </li>
           <li class="navigation-item">
@@ -63,8 +76,10 @@
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
               <span class="visually-hidden">Главная</span>
-              <img class="breadcrumbs-home" src="img/Catalog/home-link.svg" width="12" height="12"
-                alt="Логотип домой">
+              <svg class="breadcrumbs-icon" aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 0.300049L0 5.80005V12H12V5.80005L6 0.300049ZM11 11H1V6.20005L6 1.70005L11 6.20005V11Z" fill="white"/>
+                <path d="M4 10H5V7.5H7V10H8V6.5H4V10Z" fill="white"/>
+                </svg>                
             </a>
           </li>
           <li class="breadcrumbs-item">
@@ -144,7 +159,7 @@
           </fieldset>
           <!--Кнопки-->
           <div class="catalog-filter-button">
-            <button class="button button-blue button-apply" type="submit">Применить</button>
+            <button class="button button-blue button-blue-white button-apply" type="submit">Применить</button>
             <a class="button-reset" href="#">Сбросить</a>
             <div>
         </form>
@@ -167,23 +182,39 @@
           </form>
           <!--/Форма сортировки-->
           <!--Иконки видов отображения-->
-          <ul class=" reset-ul display-type">
+          <ul class="reset-ul display-type">
             <li class="display-type-item">
-              <a class="button-display" href="#">
-                <img class="button-display-image" src="img/Catalog/mode-tile.svg" width="16" height="14"
-                  alt="Показать карточки">
+              <a class="button button-display" href="#">
+                <svg class="display-icon" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 0H0V2H2V0Z" fill="black"/>
+                  <path d="M16 0H4V2H16V0Z" fill="black"/>
+                  <path d="M2 4H0V6H2V4Z" fill="black"/>
+                  <path d="M16 4H4V6H16V4Z" fill="black"/>
+                  <path d="M2 8H0V10H2V8Z" fill="black"/>
+                  <path d="M16 8H4V10H16V8Z" fill="black"/>
+                  <path d="M2 12H0V14H2V12Z" fill="black"/>
+                  <path d="M16 12H4V14H16V12Z" fill="black"/>
+                </svg>
               </a>
             </li>
             <li class="display-type-item">
-              <a class="button-display" href="#">
-                <img class="button-display-image" src="img/Catalog/mode-slideshow.svg" width="16" height="14"
-                  alt="Показать объектами">
+              <a class="button button-display" href="#">
+                <svg class="display-icon" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 12H0V14H16V12Z" fill="black"/>
+                  <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black"/>
+                </svg>
               </a>
             </li>
             <li class="display-type-item">
-              <a class="button-display  button-display-selected" href="#">
-                <img class="button-display-image" src="img/Catalog/mode-list.svg" width="16" height="14"
-                  alt="Показать список">
+              <a class="button button-display  button-display-currnet" href="#">
+                <svg class="display-icon" aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 0H0V6H4V0Z" fill="black"/>
+                  <path d="M16 0H12V6H16V0Z" fill="black"/>
+                  <path d="M10 0H6V6H10V0Z" fill="black"/>
+                  <path d="M4 8H0V14H4V8Z" fill="black"/>
+                  <path d="M16 8H12V14H16V8Z" fill="black"/>
+                  <path d="M10 8H6V14H10V8Z" fill="black"/>
+                </svg>                  
               </a>
             </li>
           </ul>
@@ -207,10 +238,10 @@
               </div>
               <ul class="reset-ul card-button">
                 <li class="card-button-item card-button-item-details">
-                  <a class="button button-brown button-details" href="#">подробнее</a>
+                  <a class="button button-md button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item card-button-item-tofavorit">
-                  <a class="button button-blue button-tofavorit" href="#">В избранное</a>
+                  <a class="button button-md button-blue button-tofavorit" href="#">В избранное</a>
                 </li>
               </ul>
             </div>
@@ -251,10 +282,10 @@
               </div>
               <ul class=" reset-ul card-button">
                 <li class="card-button-item card-button-item-details">
-                  <a class="button button-brown button-details" href="#">подробнее</a>
+                  <a class="button button-md button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item card-button-item-tofavorit">
-                  <a class="button button-blue button-tofavorit" href="#">В избранное</a>
+                  <a class="button button-md button-blue button-tofavorit" href="#">В избранное</a>
                 </li>
               </ul>
             </div>
@@ -292,10 +323,10 @@
               </div>
               <ul class=" reset-ul card-button">
                 <li class="card-button-item card-button-item-details">
-                  <a class="button button-brown button-details" href="#">подробнее</a>
+                  <a class="button button-md button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item card-button-item-tofavorit">
-                  <a class="button button-green button-tofavorit" href="#">В избранном</a>
+                  <a class="button button-md button-green button-tofavorit" href="#">В избранном</a>
                 </li>
               </ul>
             </div>
@@ -330,10 +361,10 @@
               </div>
               <ul class=" reset-ul card-button">
                 <li class="card-button-item card-button-item-details">
-                  <a class="button button-brown button-details" href="#">подробнее</a>
+                  <a class="button button-md button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item card-button-item-tofavorit">
-                  <a class="button button-blue button-tofavorit" href="#">В избранное</a>
+                  <a class="button button-md button-blue button-tofavorit" href="#">В избранное</a>
                 </li>
               </ul>
             </div>
@@ -416,31 +447,45 @@
         <h2 class="visually-hidden" hidden>Как связаться с нами?</h2>
         <ul class="social reset-ul">
           <li class="social-item">
-            <a class="social-link" href="https://twitter.com/htmlacademy_ru">
+            <a class="social-link condition-brown" href="https://twitter.com/htmlacademy_ru">
               <span class="visually-hidden">twitter</span>
-              <img class="social-link-twitter" src="img/Footer/social-twitter.svg" width="18" height="15"
-                alt="Логотип Twitter">
+              <svg class="social-icon" aria-hidden="true" focusable="false" width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6.2c1.8-.5 3.2.3 3.8 1.2.7-.2 1.4-.5 2.1-.7 0 .9-.6 1.5-.9 1.8.7.1 1.4-.6 1.4-.6-.2 
+                1-1.1 1.8-1.7 2C16.1 10.7 13 15.1 5.7 15h-.5c-.4 0-4.4-.5-5.2-1.9 2.4.2 4.1-.4 
+                5-1.2-1-.3-2.9-.4-3.2-2.9.4.1.6.2 1.3.1C1.8 8.3.4 7.5.5 5.3c.3.3 1.1.5 1.4.5C1.1 
+                5.6-.2 2.5.9.9c1.9 1.9 4 3.6 7.6 3.8C8.7 2.3 9.7.8 11.6.2Z" 
+                fill="#83B3D3"/>
+              </svg>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="https://www.facebook.com/htmlacademy">
+            <a class="social-link condition-brown" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">facebook</span>
-              <img class="social-link-facebook" src="img/Footer/social-facebook.svg" width="10" height="18"
-                alt="Логотип Facebook">
+              <svg class="social-icon" aria-hidden="true" focusable="false" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0C4.8 0 3 1.8 3 4v2H0v4h3v8h4v-8h3V6H7V4h3V0H7Z" 
+                fill="#83B3D3"/>
+              </svg>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="https://www.youtube.com/c/HTMLAcademyRUS">
+            <a class="social-link condition-brown" href="https://www.youtube.com/c/HTMLAcademyRUS">
               <span class="visually-hidden">youtube</span>
-              <img class="social-link-youtube" src="img/Footer/social-youtube.svg" width="20" height="16"
-                alt="Логотип Youtube">
+              <svg class="social-icon" aria-hidden="true" focusable="false" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 0H2.9C1.2 0 0 1.5 0 3.2v9.5C0 14.5 1.2 16 2.9 16h14.3c1.5 0 2.9-1.5 2.9-3.2V3.2C19.9 
+                1.5 18.7 0 17 0ZM7 11.8V4.2L13.7 8 7 11.8Z" 
+                fill="#83B3D3"/>
+              </svg>
             </a>
           </li>
         </ul>
-        <a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <a class="footer-logo" href="https://htmlacademy.ru/">
-          <img class="footer-logo-image" src="img/Footer/logo_htmlacademy.svg" width="115" height="34"
-            alt="Логотип Академии HTML">
+        <div class="phone">
+          <a class="phone-link condition-brown" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        </div>
+        <a class="footer-logo condition-brown" href="https://htmlacademy.ru/">
+          <svg class="social-icon" aria-hidden="true" focusable="false" width="115" height="33" viewBox="0 0 115 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 12.9v2.6h2.5v-2.6H0ZM11.6 4.5c-1.6 0-2.8.7-3.6 1.7h-.1V0h-2v15.5h2v-5.3c0-2.1 1.3-3.6 3.3-3.6 1.8 0 2.9 1.4 2.9 3.2v5.7h2V9.4c.1-3-1.8-4.9-4.5-4.9ZM26.6 4.8h-4.8V1.1h-2v3.8h-1.9v2h1.9v6c0 1.7 1 2.7 2.7 2.7h4.1v-2h-3.7c-.7 0-1.1-.4-1.1-1.1V6.8h4.8v-2ZM41.1 4.6c-1.6 0-2.9.8-3.5 2.1h-.1c-.6-1.2-1.8-2.1-3.4-2.1-1.4 0-2.5.8-3.1 1.8h-.1V4.8H29v10.6h2V10c0-2 1-3.5 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2V9.8c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2V8.9c.1-2.5-1.4-4.3-3.9-4.3ZM47.8 12.7c0 1.7 1 2.7 2.8 2.7h2v-2h-1.7c-.7 0-1.1-.4-1.1-1.1V0h-2v12.7ZM28.9 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.4 3.6-3.6 3.6ZM44.2 22c-.5-2.4-2.6-4.1-5.4-4.1-3.4 0-5.6 2.5-5.6 5.6 0 3.1 2.2 5.6 5.6 5.6 2.8 0 4.9-1.8 5.4-4.2h-2.1c-.4 1.3-1.7 2.3-3.3 2.3-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6c1.6 0 2.8 1 3.3 2.2h2.1V22ZM55.1 19.7c-.9-1.1-2.2-1.8-3.9-1.8-3.1 0-5.4 2.3-5.4 5.6s2.3 5.6 5.4 5.6c1.8 0 3-.8 3.8-1.9h.1v1.6h2V18.2h-2v1.5Zm-3.6 7.4c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c0 1.9-1.5 3.6-3.6 3.6ZM68.7 19.8c-.9-1.1-2.2-1.9-3.9-1.9-3.1 0-5.4 2.3-5.4 5.6s2.2 5.6 5.4 5.6c1.7 0 3-.8 3.8-1.8h.1v1.5h2V13.4h-2v6.4Zm-3.6 7.3c-2.2 0-3.6-1.6-3.6-3.6s1.4-3.6 3.6-3.6 3.6 1.6 3.6 3.6c-.1 2-1.5 3.6-3.6 3.6ZM78.3 17.9c-3.3 0-5.5 2.5-5.5 5.6 0 3 2.1 5.6 5.5 5.6 2.5 0 4.5-1.3 5.2-3.6h-2.1c-.5 1-1.6 1.6-3 1.6-1.9 0-3.3-1.3-3.4-2.9h8.8c.2-3.6-2-6.3-5.5-6.3Zm0 1.9c1.7 0 3 1 3.3 2.6h-6.5c.3-1.5 1.5-2.6 3.2-2.6ZM98.2 17.9c-1.6 0-2.9.8-3.6 2h-.1c-.6-1.2-1.8-2-3.4-2-1.4 0-2.5.7-3.1 1.8v-1.5h-1.9v10.6h2v-5.4c0-2 1-3.4 2.6-3.5 1.5 0 2.4 1 2.4 2.6v6.3h2v-5.6c0-2.4 1.4-3.3 2.6-3.3 1.5 0 2.4 1 2.4 2.6v6.3h2v-6.5c.1-2.6-1.4-4.4-3.9-4.4ZM109.4 27l-3.6-8.9h-2.2l4.8 11.6c-.3.9-.7 1.2-1.7 1.2h-2.5v2h2.5c1.8 0 2.8-.8 3.5-2.6l4.7-12.2h-2.1l-3.4 8.9Z" 
+            fill="#000"/>
+          </svg>
         </a>
       </section>
       <!--/Контакты-->
