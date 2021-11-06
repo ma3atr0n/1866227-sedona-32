@@ -443,7 +443,7 @@ p {
 .advantages-header {
   display: grid;
   grid-template-columns: auto 720px auto;
-  padding: 63px 0 79px 0;
+  padding: 63px 0 80px 0;
 }
 
 .advantages-header > * {
@@ -451,8 +451,14 @@ p {
 }
 
 .advantages-title {
-  margin-bottom: 23px;
+  margin-bottom: 31px;
 }
+
+.advantages-discription {
+  font-size: 22px;
+  line-height: 36px;
+}
+
 .advantages-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -460,7 +466,7 @@ p {
 
 .advantages-item-title {
   color: #000;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .advantages-item-cold .advantages-item-title {
@@ -472,7 +478,7 @@ p {
 }
 
 .advantages-count {
-  margin-bottom: 26px;
+  margin-bottom: 30px;
 }
 
 .advantages-logo {
@@ -480,7 +486,7 @@ p {
 }
 
 .pd-1 {
-  padding: 98px 90px 77px;
+  padding: 99px 90px 77px;
 }
 .pd-2 {
   padding: 89px 75px 79px;
@@ -828,7 +834,13 @@ p {
 .button-display-currnet {
   border-color: #000000;
 }
-
+.button-display:not(.button-display-currnet):hover,
+.button-display:not(.button-display-currnet):focus {
+  border-color: #83B3D3;
+}
+.button-display:active {
+  border-color: #000000;
+} /*?*/
 /* ==================================
    Section - cards
    ================================= */
