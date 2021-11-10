@@ -167,6 +167,7 @@ p {
   }
   .button-blue:active {
     color: rgba(255, 255, 255, 0.3);
+    outline: none;
   }
 
   .button-green {
@@ -306,7 +307,7 @@ p {
   line-height: 23px;
   color: #333333;
   appearance: none;
-  padding: 12px 19px;
+  padding: 9px 17px 12px;
   background: #FFFFFF url("../img/Catalog/select-arrow.svg") no-repeat center right 20px;
   outline: none;
   border: 2px solid #e6e6e6;
@@ -615,19 +616,19 @@ p {
 .subscribe-catalog {
   color: #333333;
   background: #fff;
-  padding-top: 84px;
+  padding-top: 82px;
   padding-bottom: 137px;
 }
 
 .subscribe-title {
   color: inherit;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 
 .subscribe-discription {
   font-size: 22px;
   line-height: 26px;
-  margin-bottom: 46px;
+  margin-bottom: 47px;
 }
 
 .subscribe-form {
@@ -642,7 +643,7 @@ p {
 
 .subscribe-input {
   width: 100%;
-  padding-left: 22px;
+  padding: 16px 20px 18px 22px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
@@ -663,8 +664,8 @@ p {
 .subscribe-input:active{
   background: #FFFFFF;
   color: #000000;
-  outline: 2px solid #000000;
-  outline-offset: 0;
+  border: 2px solid #000000;
+  outline: none;
 }
 
 /* ==================================
@@ -711,7 +712,7 @@ p {
   line-height: 40px;
   text-transform: uppercase;
   color: #000000;
-  padding: 36px 15px 44px 15px;
+  padding: 38px 15px 42px 15px;
   border-radius: 20px;
 }
 .phone-link:hover{
@@ -939,9 +940,10 @@ p {
   line-height: inherit;
   font-weight: inherit;
   background-color: transparent;
-  padding: 12px 40px 11px 15px;
+  padding: 12px 40px 11px 17px;
   appearance: textfield;
   border: 2px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
   border-radius: 4px 0px 0px 4px;
 }
 
@@ -951,18 +953,26 @@ p {
   margin: 0;
 }
 
-.range-input:hover {
-  outline: 2px solid rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+.range-input-left:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+.range-input-right:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
 }
 .range-input:focus {
-  
+  box-shadow: inset 0px 0px 0px 3px #81B3D2;
+  outline: 3px solid #81B3D2;
 }
 .range-input:active {
-  
+  background: #756257;
 }
 
 .range-input-right {
+  padding-left: 15px;
+  border-left: 1px solid #FFFFFF;
+  border-right: 2px solid #FFFFFF;
   border-radius: 0 4px 4px 0;
 }
 
@@ -1024,6 +1034,7 @@ p {
 .catalog {
   display: grid;
   grid-template-columns: auto 1057px auto;
+  margin-bottom: 5px;
 }
   
 .catalog > * {
@@ -1040,7 +1051,6 @@ p {
 
 .sorting-select {
   width: 287px;
-  height: 48px;
 }
 
 .catalog-value {
@@ -1086,7 +1096,7 @@ p {
   display: grid;
   grid-template-columns: 180px 318px auto;
   column-gap: 37px;
-  padding: 30px 0;
+  padding: 30px 0 29px;
   border-top: 1px solid #E6E6E6;
   border-bottom: 1px solid #E6E6E6;
 }
@@ -1121,7 +1131,7 @@ p {
 } */
 
 .card-name-link {
-  line-height: 31px;
+  line-height: 24px;
   border-radius: 5px;
 }
 .card-name-link:hover {
@@ -1140,6 +1150,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: auto;
+  margin-top: 5px;
 }
 
 .card-info > * {
@@ -1165,6 +1176,7 @@ p {
 
 .card-rating {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: auto;
@@ -1175,8 +1187,8 @@ p {
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 9px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   background: #F2F2F2;
   border-radius: 4px;
 }
@@ -1193,7 +1205,7 @@ p {
   text-align: center;
   padding-top: 31px;
   padding-bottom: 31px;
-  margin-bottom: 31px;
+  margin-bottom: 28px;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 } 
@@ -1201,7 +1213,6 @@ p {
 .catalog-pagination {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
 }
 
 .pagination {
@@ -1219,19 +1230,17 @@ p {
   max-width: 386px;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
 .count-number {
   line-height: 23px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  margin-right: 50px;
+  cursor: pointer;
 }
 
 .visible-count-select {
   width: 160px;
   min-height: 48px;
-  padding-left: 17px;
+  padding-left: 15px;
 }
