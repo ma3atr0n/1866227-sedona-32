@@ -615,7 +615,7 @@ p {
 .subscribe-catalog {
   color: #333333;
   background: #fff;
-  padding-top: 89px;
+  padding-top: 84px;
   padding-bottom: 137px;
 }
 
@@ -1201,6 +1201,7 @@ p {
 .catalog-pagination {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 }
 
 .pagination {
