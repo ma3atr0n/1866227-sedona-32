@@ -232,8 +232,10 @@ p {
   }
 
   .button-apply {
-    min-width: 160px;
+    max-width: 160px;
     width: 100%;
+    padding-top: 13px;
+    padding-bottom: 14px;
     margin-bottom: 20px;
     margin-top: 55.33px;
   }
@@ -820,21 +822,20 @@ p {
 }
 
 .catalog-filter-group:nth-child(1) {
-  margin-right: 67px;
-  max-width: 150px;
+  max-width: 217px;
 }
 
 .catalog-filter-group:nth-child(2) {
-  margin-right: 167px;
-  max-width: 145px;
+  max-width: 312px;
 }
 
 .catalog-filter-group:nth-child(3) {
-  margin-right: 81px;
   max-width: 287px;
+  margin-right: 81px;
 }
 
 .catalog-filter-group:nth-child(4) {
+  max-width: 160px
 }
 
 .catalog-filter-title {
@@ -851,19 +852,138 @@ p {
   margin-bottom: 15px;
 }
 
-.control-label {
-  line-height: 23px;
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
 }
 
-.catalog-filter-input {
-  display: flex;
-  margin-bottom: 20px;
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  background-image: url(../img/Catalog/filter-select.png);
+}
+
+.control:hover .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+}
+.control:focus .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+}
+.control:active .control-mark {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.control-label {
+  line-height: 23px;
 }
 
 .catalog-filter-button {
   text-align: center;
 }
 
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.range-label {
+  position: relative;
+}
+
+.range-input {
+  width: 100%;
+  color: #ffffff;
+  background-color: transparent;
+  padding: 14px 40px 11px 19px;
+  appearance: textfield;
+  outline: 2px solid #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range-input:hover {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.range-input:focus {
+  
+}
+.range-input:active {
+  
+}
+
+.range-input-right {
+  border-radius: 0 4px 4px 0;
+}
+
+.range-placeholder {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0;
+  border: none;
+}
+.range-toggle:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:active {
+  border: 2px solid #83B3D3;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  left: 0;
+  top: -8px;
+}
+
+.toggle-max {
+  right: 0;
+  transform: translateX(50%);
+  top: -8px;
+}
 /* ==================================
   Section - Catalog
   ================================= */
