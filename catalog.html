@@ -60,7 +60,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button button-md button-brown button-booking-nav" href="#">Хочу Сюда!</a>
+            <a class="button button-brown button-booking-nav" href="#">Хочу Сюда!</a>
           </li>
         </ul>
         <!--/Навигация правая часть-->
@@ -91,7 +91,7 @@
         <!--Фильтры-->
         <form class="catalog-filter" action="https://echo.htmlacademy.ru" method="POST">
           <!--Фильтр инфраструктура-->
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group catalog-filter-infrastructure">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class=" reset-ul catalog-filter-list">
               <li class="catalog-filter-item">
@@ -118,7 +118,7 @@
             </ul>
           </fieldset>
           <!--Фильтр тип жилья-->
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group catalog-filter-accommodation">
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class=" reset-ul catalog-filter-list">
               <li class="catalog-filter-item">
@@ -145,14 +145,14 @@
             </ul>
           </fieldset>
           <!--Цена отеля-->
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group catalog-filter-hotel">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
             <div class="range-wrapper-inputs">
               <label class="range-label">
-                <input class="range-input range-input-left" type="number" name="price-from" value="0"><span class="range-placeholder">от</span>
+                <input class="range-input range-input-left" type="number" name="price-from" value="0"><span class="range-placeholder range-placeholder-left">от</span>
               </label>
               <label class="range-label">
-                <input class="range-input range-input-right" type="number" name="price-to" value="9000"><span class="range-placeholder">до</span>
+                <input class="range-input range-input-right" type="number" name="price-to" value="9000"><span class="range-placeholder range-placeholder-right">до</span>
               </label>
             </div>
             <div class="range-scale">
@@ -170,7 +170,7 @@
           <div class="catalog-filter-button">
             <button class="button button-blue button-blue-white button-apply" type="submit">Применить</button>
             <button class="button-reset" type="reset">Сбросить</button>
-          <div>
+          </div>
         </form>
         <!--/Фильтры-->
       </header>
@@ -252,7 +252,7 @@
                   <a class="button button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item card-button-item-tofavorit">
-                  <a class="button button-md button-blue button-tofavorit" href="#">В избранное</a>
+                  <a class="button button-blue button-tofavorit" href="#">В избранное</a>
                 </li>
               </ul>
             </div>
@@ -298,7 +298,7 @@
                   <a class="button button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item card-button-item-tofavorit">
-                  <a class="button button-md button-blue button-tofavorit" href="#">В избранное</a>
+                  <a class="button button-blue button-tofavorit" href="#">В избранное</a>
                 </li>
               </ul>
             </div>
@@ -341,7 +341,7 @@
                   <a class="button button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item card-button-item-tofavorit">
-                  <a class="button button-md button-green button-tofavorit" href="#">В избранном</a>
+                  <a class="button button-green button-tofavorit" href="#">В избранном</a>
                 </li>
               </ul>
             </div>
@@ -381,7 +381,7 @@
                   <a class="button button-brown button-details" href="#">подробнее</a>
                 </li>
                 <li class="card-button-item card-button-item-tofavorit">
-                  <a class="button button-md button-blue button-tofavorit" href="#">В избранное</a>
+                  <a class="button button-blue button-tofavorit" href="#">В избранное</a>
                 </li>
               </ul>
             </div>
@@ -449,7 +449,7 @@
       <!--Подписка-->
       <section class="subscribe subscribe-catalog">
         <h2 class="subscribe-title title-3 reset-indent">Подпишитесь на рассылку</h2>
-        <p class="subscribe-discription">Только полезная информация и никакого спама,</br>
+        <p class="subscribe-discription">Только полезная информация и никакого спама,
           честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="subscribe-form-label" aria-label="Ваш e-mail">

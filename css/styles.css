@@ -133,10 +133,6 @@ p {
     word-break: break-all;
   }
 
-  .button-md {
-    min-width: 160px; 
-  }
-
   .button-brown {
     background-color:#756257;
   }
@@ -184,6 +180,10 @@ p {
     color: rgba(255, 255, 255, 0.3);
   }
 
+  .button-tofavorit {
+    min-width: 160px; 
+  }
+
   .button-booking {
     max-width: 575px;
     width: 100%;
@@ -206,7 +206,7 @@ p {
   }
 
   .button-booking-nav {
-    margin-left: 33px;
+    min-width: 160px;
   }
 
   .button-reset {
@@ -327,10 +327,8 @@ p {
 /* ==================================
    Section - Header
    ================================= */
-.page-header {
-}
 
-.main-navigation {
+   .main-navigation {
   display: grid;
   grid-template-columns: auto 308px 439px 310px auto;
   position: relative;
@@ -404,8 +402,12 @@ p {
   background-color:  #756257;
 }
 
-.navigation-item-icon {
+.navigation-user .navigation-item:not(:first-child) {
   margin-left: 21px;
+}
+
+.navigation-user .navigation-item:last-child {
+  margin-left: 33px;
 }
 
 .navigation-item-icon .navigation-link:focus {
@@ -629,6 +631,7 @@ p {
   font-size: 22px;
   line-height: 26px;
   margin-bottom: 47px;
+  padding: 0 160px;
 }
 
 .subscribe-form {
@@ -812,6 +815,7 @@ p {
    ================================= */
 .catalog-filter {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .catalog-filter-group {
@@ -822,23 +826,25 @@ p {
   width: 100%;
 }
 
-.catalog-filter-group:nth-child(1) {
+.catalog-filter-infrastructure {
   max-width: 150px;
   margin-right: 67px;
 }
 
-.catalog-filter-group:nth-child(2) {
+.catalog-filter-accommodation {
   max-width: 145px;
   margin-right: 167px;
 }
 
-.catalog-filter-group:nth-child(3) {
+.catalog-filter-hotel {
   max-width: 287px;
   margin-right: 81px;
 }
 
-.catalog-filter-group:nth-child(4) {
-  max-width: 160px
+.catalog-filter-button {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog-filter-title {
@@ -978,10 +984,14 @@ p {
 
 .range-placeholder {
   position: absolute;
-  right: 16px;
-  top: 8px;
+  right: 15px;
+  top: 11px;
   color: rgba(255, 255, 255, 0.3);
   line-height: 23px;
+}
+
+.range-placeholder-right {
+  right: 17px;
 }
 
 .range-scale {
