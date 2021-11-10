@@ -852,6 +852,9 @@ p {
   margin-bottom: 15px;
 }
 
+/* ==================================
+   Section - Control
+   ================================= */
 .control {
   position: relative;
   display: block;
@@ -867,19 +870,40 @@ p {
   border-radius: 4px;
   background-color: #FFFFFF;
 }
-
-.control-input[type="checkbox"]:checked + .control-mark::before {
-  background-image: url(../img/Catalog/filter-select.png);
+ 
+.control-input[type="checkbox"]:checked + .control-mark:before {
+  display: block;
+  background: transparent url(../img/Catalog/checkbox.svg) no-repeat center;
+  content: "";
+  width: 20px;
+  height: 20px;
 }
 
-.control:hover .control-mark {
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+}
+
+.control-input:hover + .control-mark {
   background: rgba(255, 255, 255, 0.6);
 }
-.control:focus .control-mark {
+.control-input:focus + .control-mark {
   background: rgba(255, 255, 255, 0.6);
   outline: 3px solid #83B3D3;
 }
-.control:active .control-mark {
+.control-input:active + .control-mark {
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -891,6 +915,9 @@ p {
   text-align: center;
 }
 
+/* ==================================
+   Section - range
+   ================================= */
 .range-wrapper-inputs {
   display: flex;
   justify-content: center;
