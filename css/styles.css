@@ -449,9 +449,138 @@ p {
 .navigation-user .navigation-item {
   padding: 0;
 }
+/* ==================================
+   Section - Popover
+   ================================= */
+.navigation-item-popover {
+  position: relative;
+}
+.navigation-item-popover::after {
+  position: absolute;
+  width: 45px;
+  height: 22px;
+  left: -13px;
+  content: "";
+}
 
+.popover {
+  position: absolute;
+  z-index: 1;
+  left: -189px;
+  top: 38px;
+  width: 400px;
+  min-height: 159px;
+  background: #FFFFFF;
+  border-radius: 20px 20px 30px 30px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  visibility: hidden;
+  opacity: 0;
+  user-select: none;
+  transition: all 0.3s ease;
+}
 
+.popover::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  left: 191px;
+  top: -7px;
+  border-top: 1px solid #E6E6E6;
+  border-left: 1px solid #E6E6E6;
+  background-color: #FFFFFF;
+  transform: rotate(40deg) skewX(-10deg);
+}
 
+.navigation-item-popover:hover .popover {
+  visibility: visible;
+  opacity: 1;
+  user-select: unset;
+}
+
+.popover-list {
+  border-top: 1px solid #E6E6E6;
+  border-left: 1px solid #E6E6E6;
+  border-right: 1px solid #E6E6E6;
+  border-radius: 20px 20px 0 0;
+  padding: 24px 24px 26px 24px;
+}
+
+.popover-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.popover-item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.popover-link {
+  display: flex;
+  align-items: center;
+}
+
+.popover-link:hover {
+  opacity: 0.6;
+}
+.popover-link:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: 10px;
+  border-radius: 1px;
+}
+.popover-link:active {
+  opacity: 0.3;
+}
+
+.popover-item-image {
+  border-radius: 50%;
+  margin-right: 17px;
+  flex-shrink: 0;
+}
+
+.popover-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.popover-item-name {
+  font-weight: 700;
+  line-height: 18px;
+  color: #000;
+}
+
+.popover-item-type {
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.popover-button-del {
+  align-self: start;
+  margin-top: 6px;
+}
+
+.popover-button-del:hover path{
+  fill: #000;
+}
+.popover-button-del:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: 10px;
+  border-radius: 1px;
+}
+.popover-button-del:active path{
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.button-favorite-all {
+  padding: 0;
+  width: 100%;
+  border-radius: 0px 0px 20px 20px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+}
 /* ==================================
    Section - Intro
    ================================= */
