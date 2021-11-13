@@ -276,6 +276,79 @@
     </footer>
     <!--FOOTER END-->
   </div>
+  <div class="overlay">
+    <section class="modal modal-search">
+      <div class="modal-header">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <button  class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+          <svg class="navigation-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1.2L11.8 0L6.5 5.3L1.2 0L0 1.2L5.3 6.5L0 11.8L1.2 13L6.5 7.7L11.8 13L13 11.8L7.7 6.5L13 1.2Z" fill="black"/>
+          </svg>
+        </button>
+      </div>
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="modal-form-group modal-form-date">
+          <label class="modal-label" for="date-check-in">Дата заезда:</label>
+          <input class="modal-form-field" type="text" id="date-check-in" value="27 апреля 2020">
+          <p class="modal-form-text modal-text-red">Мы не можем отправить вас в прошлое.</p>
+        </div>
+        <div class="modal-form-group modal-form-date">
+          <label class="modal-label" for="date-check-out">Дата выезда:</label>
+          <input class="modal-form-field" type="text" id="date-check-out" value="1 сентября 2021">
+          <p class="modal-form-text">На эти даты есть свободные номера. Пока есть.</p>
+        </div>
+        <div class="modal-form-group modal-group-counter">
+          <div class="modal-form-column">
+            <label class="modal-label" for="adult-counter">Взрослые:</label>
+            <div class="modal-form-counter">
+              <button class="button-counter button-counter-minus" type="button">
+                <span class="visually-hidden">+</span>
+                <svg width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black"/>
+                </svg>
+              </button>
+              <input class="modal-form-field" type="number" id="adult-counter" value="2">
+              <button class="button-counter button-counter-plus" type="button">
+                <span class="visually-hidden">-</span>
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="modal-form-column modal-column-info">
+            <label class="modal-label" for="child-counter">Дети:</label>
+            <div class="modal-hint">
+            </div>
+            <p class="modal-hint-discription">
+              Укажите количество детей, 
+              которые будут с вами, возраст 
+              которых от 6 до 18 лет. Дети 
+              до 6 лет размещаются бесплатно.
+            </p>
+            <div class="modal-form-counter">
+              <button class="button-counter button-counter-minus" type="button">
+                <span class="visually-hidden">+</span>
+                <svg width="13" height="1" viewBox="0 0 13 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black"/>
+                </svg>
+              </button>
+              <input class="modal-form-field" type="number" id="child-counter" value="1">
+              <button class="button-counter button-counter-plus" type="button">
+                <span class="visually-hidden">-</span>
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.3" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button class="button button-blue button-submit-modal" type="submit">Найти</button>
+      </form>
+    </section>
+  </div>
 </body>
 
 </html>
