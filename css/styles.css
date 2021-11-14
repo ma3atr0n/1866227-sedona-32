@@ -62,19 +62,6 @@
     background-color: #fff;
   }
   
-  .container-md {
-    max-width: 720px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .container-lg {
-    max-width: 1056px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
   .reset-ul {
     margin: 0;
     padding: 0;
