@@ -18,9 +18,9 @@
   }
   
   
-  /* ==================================
-     Section - Global styles
-     ================================= */
+/* ==================================
+   Section - Global styles
+   ================================= */
   html {
     height: 100%;
     box-sizing: border-box;
@@ -44,10 +44,6 @@
     background-color: #e5e5e5;
     color: #333;
   }
-  
-  /* a {
-    text-decoration: none;
-  } */
   
   img {
     max-width: 100%;
@@ -109,166 +105,166 @@
   }
   
   /* ==================================
-     Section - Buttons
-     ================================= */
-     .button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      font-family: "PT Sans", Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      line-height: 21px;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-align: center;
-      text-decoration: none;
-      color: #FFFFFF;
-      border:0;
-      border: none;
-      outline: none;
-      outline-offset: 0;
-      border-radius: 4px;
-      cursor: pointer;
-      padding: 8px;
-      word-break: break-all;
-    }
-  
-    .button-brown {
-      background-color:#756257;
-    }
-    .button-brown:hover {
-      background-color: #615048;
-    }
-    .button-brown:focus {
-      background: #615048;
-      outline: 3px solid #83B3D3;
-    }
-    .button-brown:active {
-      color: rgba(255, 255, 255, 0.3);
-    }
-  
-    .button-blue {
-      background-color:#83B3D3;
-    }
-    .button-blue:hover {
-      background-color: #68A2CA;
-    }
-    .button-blue:focus {
-      background: #68A2CA;
-      outline: 3px solid #756257;
-    }
-    .button-blue-white:focus {
-      background: #68A2CA;
-      outline: 3px solid #FFFFFF;
-    }
-    .button-blue:active {
-      color: rgba(255, 255, 255, 0.3);
-      outline: none;
-    }
-  
-    .button-green {
-      background-color:#7DB54F;
-    }
-    .button-green:hover {
-      background-color: #6C9E42;
-    }
-    .button-green:focus {
-      background: #6C9E42;
-      outline: 3px solid #756257;
-    }
-    .button-green:active {
-      color: rgba(255, 255, 255, 0.3);
-    }
-  
-    .button-tofavorit {
-      min-width: 160px; 
-    }
-  
-    .button-booking {
-      max-width: 575px;
-      width: 100%;
-      font-size: 20px;
-      line-height: 36px;
-      padding-top: 12px;
-      padding-bottom: 12px;
-      margin-right: auto;
-      margin-left: auto;
-      border-radius: 10px;
-    }
-  
-    .button-subscribe {
-      font-size: 20px;
-      line-height: 26px;
-      max-width: 200px;
-      width: 100%;
-      padding: 17px 20px;
-      border-radius: 0px 10px 10px 0px;
-    }
-  
-    .button-booking-nav {
-      min-width: 160px;
-    }
-  
-    .button-reset {
-      font-size: 18px;
-      line-height: 23px;
-      text-align: center;
-      text-decoration: none;
-      color: #ffffff;
-      background: transparent;
-      font-family: "PT Sans", Arial, Helvetica, sans-serif;
-      border: 0;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-    .button-reset:hover {
-      color: rgba(255, 255, 255, 0.6);
-    }
-    .button-reset:focus {
-      outline: 3px solid #83B3D3;
-    }
-    .button-reset:active {
-      color: rgba(255, 255, 255, 0.3);
-    }
-  
-    .button-apply {
-      max-width: 160px;
-      width: 100%;
-      padding-top: 13px;
-      padding-bottom: 14px;
-      margin-bottom: 18px;
-      margin-top: 61px;
-    }
-  
-    .button-details {
-      min-width: 151px;
-      width: 100%;
-    }
-  
-    .button-more {
-      font-family: "PT Sans", Arial, Helvetica, sans-serif;
-      font-size: 20px;
-      line-height: 26px;
-      max-width: 625px;
-      width: 100%;
-      padding-top: 14px;
-      padding-bottom: 15px;
-      border: 0;
-    }
-  
-    .pagination-button {
-      display: flex;
-      width: 55px;
-      height: 55px;
-      font-size: 20px;
-      line-height: 26px;
-      align-items: center;
-      justify-content: center;
-    }
+    Section - Buttons
+    ================================= */
+  .button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border:0;
+    border: none;
+    outline: none;
+    outline-offset: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px;
+    word-break: break-all;
+  }
+
+  .button-brown {
+    background-color:#756257;
+  }
+  .button-brown:hover {
+    background-color: #615048;
+  }
+  .button-brown:focus {
+    background: #615048;
+    outline: 3px solid #83B3D3;
+  }
+  .button-brown:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-blue {
+    background-color:#83B3D3;
+  }
+  .button-blue:hover {
+    background-color: #68A2CA;
+  }
+  .button-blue:focus {
+    background: #68A2CA;
+    outline: 3px solid #756257;
+  }
+  .button-blue-white:focus {
+    background: #68A2CA;
+    outline: 3px solid #FFFFFF;
+  }
+  .button-blue:active {
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
+
+  .button-green {
+    background-color:#7DB54F;
+  }
+  .button-green:hover {
+    background-color: #6C9E42;
+  }
+  .button-green:focus {
+    background: #6C9E42;
+    outline: 3px solid #756257;
+  }
+  .button-green:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-tofavorit {
+    min-width: 160px; 
+  }
+
+  .button-booking {
+    max-width: 575px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 36px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+  }
+
+  .button-subscribe {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 200px;
+    width: 100%;
+    padding: 17px 20px;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .button-booking-nav {
+    min-width: 160px;
+  }
+
+  .button-reset {
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background: transparent;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    border: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .button-reset:hover {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .button-reset:focus {
+    outline: 3px solid #83B3D3;
+  }
+  .button-reset:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .button-apply {
+    max-width: 160px;
+    width: 100%;
+    padding-top: 13px;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+    margin-top: 61px;
+  }
+
+  .button-details {
+    min-width: 151px;
+    width: 100%;
+  }
+
+  .button-more {
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 625px;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    border: 0;
+  }
+
+  .pagination-button {
+    display: flex;
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+    line-height: 26px;
+    align-items: center;
+    justify-content: center;
+  }
   /* ==================================
-     Section - Typography
-     ================================= */
+    Section - Typography
+    ================================= */
   .title-1 {
     font-weight: 700;
     font-size: 60px;
@@ -325,10 +321,10 @@
   }
   
   /* ==================================
-     Section - Header
-     ================================= */
+    Section - Header
+    ================================= */
   
-     .main-navigation {
+  .main-navigation {
     display: grid;
     grid-template-columns: auto 308px 439px 310px auto;
     position: relative;
@@ -450,8 +446,8 @@
     padding: 0;
   }
   /* ==================================
-     Section - Popover
-     ================================= */
+    Section - Popover
+    ================================= */
   .navigation-item-popover {
     position: relative;
   }
@@ -584,8 +580,8 @@
   }
   
   /* ==================================
-     Section - modal
-     ================================= */
+    Section - modal
+    ================================= */
   
   .overlay {
     z-index: 100;
@@ -858,8 +854,8 @@
   } 
 
   /* ==================================
-     Section - Intro
-     ================================= */
+    Section - Intro
+    ================================= */
   .intro {
     background: #dae8f1 url("../img/Index/index-background.jpg") no-repeat
       center/cover;
@@ -882,8 +878,8 @@
   }
   
   /* ==================================
-     Section - Advantages
-     ================================= */
+    Section - Advantages
+    ================================= */
   .advantages {
     text-align: center;
   }
