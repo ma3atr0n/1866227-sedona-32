@@ -1168,7 +1168,6 @@
   
   .inner-header-title {
     color: #fff;
-    /* margin-bottom: 5px; */
   }
   
   .breadcrumbs {
@@ -1536,10 +1535,6 @@
     display: flex;
     flex-direction: column;
   }
-  
-  /* .card-name {
-    line-height: 31px;
-  } */
   
   .card-name-link {
     line-height: 24px;
