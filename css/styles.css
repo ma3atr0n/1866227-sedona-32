@@ -1012,7 +1012,7 @@
   .subscribe-catalog {
     color: #333333;
     background: #fff;
-    padding-top: 82px;
+    padding-top: 77px;
     padding-bottom: 137px;
   }
   
@@ -1607,7 +1607,7 @@
     text-align: center;
     padding-top: 31px;
     padding-bottom: 31px;
-    margin-bottom: 28px;
+    margin-bottom: 23px;
     border-top: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
   } 
@@ -1622,6 +1622,10 @@
     width: 378px;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .pagination-item {
+    margin: 5px 0;
   }
 
   .pagination-item:not(:last-child) {
