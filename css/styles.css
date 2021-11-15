@@ -1468,8 +1468,9 @@
   
   .display-type {
     width: 160px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 48px);
+    gap: 8px;
     flex-shrink: 0;
   }
   
@@ -1618,9 +1619,13 @@
   }
   
   .pagination {
-    width: 369px;
+    width: 378px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .pagination-item:not(:last-child) {
+    margin-right: 8px;
   }
   
   .pagination-disabled {
@@ -1635,6 +1640,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
   }
   
   .count-number {
