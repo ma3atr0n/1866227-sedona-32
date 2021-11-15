@@ -1084,8 +1084,8 @@
     align-items: center;
   }
   
-  .social-item:not(:first-child) {
-    margin-left: 30px;
+  .social-item:not(:last-child) {
+    margin-right: 30px;
   }
   
   .social-link {
