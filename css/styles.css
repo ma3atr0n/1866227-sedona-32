@@ -242,8 +242,8 @@
 
   .pagination-button {
     display: flex;
-    width: 55px;
-    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
     font-size: 20px;
     line-height: 26px;
     align-items: center;
@@ -313,7 +313,7 @@
   
   .main-navigation {
     display: grid;
-    grid-template-columns: auto 308px 439px 310px auto;
+    grid-template-columns: auto 350px 397px 310px auto;
     position: relative;
   }
   
@@ -321,7 +321,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
   
   }
   
@@ -334,8 +333,8 @@
     padding-bottom: 21px;
   }
   
-  .navigation-left .navigation-item:not(:first-child) {
-    margin-left: 5px;
+  .navigation-left .navigation-item:not(:last-child) {
+    margin-right: 33px;
   }
   
   .navigation-link {
@@ -386,11 +385,12 @@
   }
   
   .navigation-user .navigation-item:not(:first-child) {
-    margin-left: 21px;
+    margin: 10px 0 10px 21px;
+    
   }
   
   .navigation-user .navigation-item:last-child {
-    margin-left: 33px;
+    margin: 10px 0 10px 33px;
   }
   
   .navigation-item-icon .navigation-link:focus {
@@ -575,7 +575,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -583,8 +583,8 @@
     background-color: rgba(242, 242, 242, 0.8);
   }
   
-  .overlay-open {
-    display: flex;
+  .overlay-close {
+    display: none;
   }
   
   .modal {
@@ -669,12 +669,13 @@
     line-height: 40px;
     color: #000000;
     border: none;
-    padding: 5px 45px 5px 19px;
+    padding: 3px 43px 3px 17px;
   }
 
   .modal-form-date .modal-form-field {
-    background: url(../img/Modal/calendar.svg) no-repeat right 19px center;
+    background: url(../img/Modal/calendar.svg) no-repeat right 17px center;
     background-color:  #F2F2F2;
+    border: 2px solid transparent;
   }
 
   .modal-form-field:hover,
@@ -684,11 +685,14 @@
   .modal-form-field:focus {
     outline: 3px solid #83B3D3;
   }
-  .modal-form-field[type="number"]:focus {
+  .modal-form-counter .modal-form-field:focus {
     outline-offset: -3px;
   }
-  .modal-form-field:active {
-    outline: 2px solid #000000;
+  .modal-form-date .modal-form-field:not(:placeholder-shown) {
+    border: 2px solid #000000;
+  }
+  .modal-form-date .modal-form-field:focus:invalid:not(:placeholder-shown) {
+    border: 2px solid #FF5757;
   }
 
   .modal-form-text {
@@ -740,6 +744,7 @@
     border: 0;
     border-radius: 15px;
     background-color: transparent;
+    cursor: pointer;
   }
 
   .button-counter-minus {
@@ -896,6 +901,7 @@
   .advantages-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    
   }
   
   .advantages-item-title {
@@ -965,7 +971,7 @@
      ================================= */
   .booking {
     text-align: center;
-    padding-top: 91px;
+    padding-top: 90px;
     padding-bottom: 91px;
     display: grid;
     grid-template-columns: auto 720px auto;
@@ -976,7 +982,7 @@
   }
   
   .booking-title {
-    margin-bottom: 28px;
+    margin-bottom: 29px;
   }
   
   .booking-text {
@@ -1034,14 +1040,14 @@
   
   .subscribe-input {
     width: 100%;
-    padding: 16px 20px 18px 22px;
+    padding: 16px 20px 15px 19px;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 26px;
     color: rgba(0, 0, 0, 0.6);
     height: 100%;
     border-radius: 10px 0px 0px 10px;
-    border: none;
+    border: 3px solid transparent;
     background: #F2F2F2;
   }
   .subscribe-input:hover{
@@ -1052,11 +1058,13 @@
     outline: 3px solid #83B3D3;
     outline-offset: 0;
   }
-  .subscribe-input:active{
+  .subscribe-input:not(:placeholder-shown) {
     background: #FFFFFF;
     color: #000000;
-    border: 2px solid #000000;
-    outline: none;
+    border-color: #000;
+  }
+  .subscribe-input:focus:invalid:not(:placeholder-shown) {
+    border-color: #FF5757;
   }
   
   /* ==================================
@@ -1103,7 +1111,7 @@
     line-height: 40px;
     text-transform: uppercase;
     color: #000000;
-    padding: 38px 15px 42px 15px;
+    padding: 36px 15px 44px 15px;
     border-radius: 20px;
   }
   .phone-link:hover{
@@ -1186,15 +1194,15 @@
     display: inline-flex;
     border-radius: 1px;
   }
-  .breadcrumbs-link:hover {
-    color: rgba(255, 255, 255, 0.6);
+  .breadcrumbs-item:not(:last-child) .breadcrumbs-link:hover {
+    opacity: 0.6;
   }
-  .breadcrumbs-link:focus {
+  .breadcrumbs-item:not(:last-child) .breadcrumbs-link:focus {
     outline: 3px solid #83B3D3;
     outline-offset: 4px;
   }
-  .breadcrumbs-link:active {
-    color: rgba(255, 255, 255, 0.3);
+  .breadcrumbs-item:not(:last-child) .breadcrumbs-link:active {
+    opacity: 0.3;
   }
   
   /* ==================================
@@ -1232,6 +1240,8 @@
     width: 160px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    
   }
   
   .catalog-filter-title {
@@ -1306,11 +1316,7 @@
   .control-label {
     line-height: 23px;
   }
-  
-  .catalog-filter-button {
-    text-align: center;
-  }
-  
+    
   /* ==================================
      Section - range
      ================================= */
@@ -1440,6 +1446,7 @@
   
   .catalog-sorting {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin: 0;
     padding-top: 44px;
@@ -1463,6 +1470,7 @@
     width: 160px;
     display: flex;
     justify-content: space-between;
+    flex-shrink: 0;
   }
   
   .button-display {
@@ -1605,6 +1613,7 @@
   
   .catalog-pagination {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
   
@@ -1617,6 +1626,7 @@
   .pagination-disabled {
     color: #000000;
     background-color: #f2f2f2;
+    cursor: default;
   }
   
   .visible-count {
