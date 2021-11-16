@@ -1339,7 +1339,7 @@
     line-height: inherit;
     font-weight: inherit;
     background-color: transparent;
-    padding: 12px 40px 11px 17px;
+    padding: 12px 36px 11px 17px;
     appearance: textfield;
     border: 2px solid #FFFFFF;
     border-right: 1px solid #FFFFFF;
@@ -1350,6 +1350,10 @@
   .range-input::-webkit-inner-spin-button {
     appearance: none;
     margin: 0;
+  }
+
+  .range-input::placeholder {
+    color: #ffffff;
   }
   
   .range-input-left:hover {
@@ -1364,8 +1368,15 @@
     box-shadow: inset 0px 0px 0px 3px #81B3D2;
     outline: 3px solid #81B3D2;
   }
-  .range-input:active {
+  .range-input-left:not(:placeholder-shown) {
     background: #756257;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-right: 1px solid rgba(255, 255, 255, 1);
+  }
+  .range-input-right:not(:placeholder-shown) {
+    background: #756257;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-left: 1px solid rgba(255, 255, 255, 1);
   }
   
   .range-input-right {
