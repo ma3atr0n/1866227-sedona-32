@@ -673,7 +673,7 @@
   }
 
   .modal-form-date .modal-form-field {
-    background: url("../img/Modal/calendar.svg") no-repeat right 17px center;
+    background: url(../img/Modal/calendar.svg) no-repeat right 17px center;
     background-color:  #F2F2F2;
     border: 2px solid transparent;
   }
@@ -786,7 +786,7 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: url("../img/Modal/i.svg") no-repeat center;
+    background: url(../img/Modal/i.svg) no-repeat center;
     background-color: #83B3D3;
     border: none;
     border: 0;
@@ -1282,7 +1282,7 @@
    
   .control-input[type="checkbox"]:checked + .control-mark:before {
     display: block;
-    background: transparent url("../img/Catalog/checkbox.svg") no-repeat center;
+    background: transparent url(../img/Catalog/checkbox.svg) no-repeat center;
     content: "";
     width: 20px;
     height: 20px;
